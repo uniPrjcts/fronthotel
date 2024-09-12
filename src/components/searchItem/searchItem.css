@@ -1,6 +1,6 @@
 .searchItem {
     border: 1px solid lightgray;
-    border-raidus: 5px;
+    border-radius: 5px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 .siImg {
-    widht: 200px;
+    width: 200px;
     height: 200px;
     object-fit: cover;
 }
@@ -78,7 +78,7 @@
 .siRating>button {
     background-color: #583bff;
     color: white;
-    paddin: 5px;
+    padding: 5px;
     font-weight: bold;
     border: none;
 }
