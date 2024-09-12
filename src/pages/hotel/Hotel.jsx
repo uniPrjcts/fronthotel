@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../../components/header/Header";
-import Navbar from "../../components/navbar/navbar";
+import Navbar from "../../components/navbar/Navbar";
 import "./hotel.css";
 import { faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import MailList from "../../components/mailList/MailList";
@@ -88,9 +88,14 @@ const Hotel = () => {
                         Preços a partir de {data.taxa_base}
                     </span>
                     <div className="hotelImgs">
-                        {data.fotos.map((foto, i) => (
-                            <div className="hotelImgWrapper">
-                                <img onClick={() => handleOpen(i)} src={foto.src} alt="" className="hotelImg" />
+                        {(data.fotos || []).map((foto, i) => (
+                            <div className="hotelImgWrapper" key={i}>
+                                <img
+                                    onClick={() => handleOpen(i)}
+                                    src={foto.src}
+                                    alt=""
+                                    className="hotelImg"
+                                />
                             </div>
                         ))}
                     </div>
